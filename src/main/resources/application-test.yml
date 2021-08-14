@@ -2,12 +2,6 @@ spring:
   application:
     name: speedy.io
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://diaristatododia.hopto.org/auth/realms/diarista
-          jwk-set-uri: https://diaristatododia.hopto.org/auth/realms/diarista/protocol/openid-connect/certs
 server:
   port: 8081
 
