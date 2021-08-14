@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: speedy.io
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://diaristatododia.hopto.org/auth/realms/diarista
+          jwk-set-uri: https://diaristatododia.hopto.org/auth/realms/diarista/protocol/openid-connect/certs
+server:
+  port: 8081
+
+logging:
+  level:
+    org:
+      srpingframework:
+        security: DEBUG
+
+api:
+  speedy:
+    base_url: https://sandbox-reporting.rpdpymnt.com
+    base_version: /api/v3
+    api_key: not received
+    login:
+      path: /merchant/user/login
+    transactions_report:
+      path: /transactions/report
+    transaction_list:
+      path: /transaction/list
+    transaction:
+      path: /transaction
+    client:
+      path: /client
