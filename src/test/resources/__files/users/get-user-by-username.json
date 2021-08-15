@@ -1,0 +1,34 @@
+[
+  {
+    "id": "7660b54b-6ab8-41ba-a592-5e552b82adaf",
+    "createdTimestamp": 1624230378807,
+    "username": "app-user",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin2mknkwdsnlnn2hh2e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  }
+]

@@ -1,0 +1,307 @@
+[
+  {
+    "id": "7660b54b-6ab8-41ba-a592-5e552b82adaf",
+    "createdTimestamp": 1624230378807,
+    "username": "app-user",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin2mknkwdsnlnn2hh2e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "b43016ff-8b9b-4a39-8996-811abb35bcf8",
+    "createdTimestamp": 1624189662550,
+    "username": "demo",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "authorities",
+    "email": "empiremicroservices@gmail.com",
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "a6ab3ec6-193e-42f0-bd73-a44c99a216fd",
+    "createdTimestamp": 1624316430554,
+    "username": "sherllokholmes",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "Sherllok",
+    "lastName": "Holmes",
+    "email": "test2@test.com",
+    "attributes": {
+      "cpf": [
+        "222222222;222223333"
+      ],
+      "phone": [
+        "11934002606"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "c7cde744-4bae-4871-bcf6-61deee4d37ec",
+    "createdTimestamp": 1624326229863,
+    "username": "string",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "60477f44-0e56-4d93-8409-9a455d7c78bb",
+    "createdTimestamp": 1624326469281,
+    "username": "string2",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin222@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "6ddbb4ed-62e6-4f30-9a2b-97ce9393de11",
+    "createdTimestamp": 1624327365226,
+    "username": "string22",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin222e@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "6722f795-fba4-4aaf-8c6b-3f946975fc5f",
+    "createdTimestamp": 1624327645973,
+    "username": "string2f2",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin222e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "22e0e2ec-ce48-4955-8812-cf82c7f8355b",
+    "createdTimestamp": 1624327795837,
+    "username": "string2fbb2",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin2mnn22e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "fb569436-db44-4837-866f-eb51641c4db1",
+    "createdTimestamp": 1624327916424,
+    "username": "strinmmmg2fbb2",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin2mnn2hh2e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "dff3303c-b7a8-45a6-ae57-d3e1f799875e",
+    "createdTimestamp": 1624328076526,
+    "username": "strinmmmg2jnjbfbb2",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "firstName": "string",
+    "lastName": "string",
+    "email": "strin2mknknlnn2hh2e4@gmail.com",
+    "attributes": {
+      "cpf": [
+        "36640252880"
+      ],
+      "address": [
+        "string"
+      ],
+      "phone": [
+        "string"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": true,
+      "manage": true
+    }
+  }
+]

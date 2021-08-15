@@ -13,15 +13,15 @@ logging:
 
 api:
   speedy:
-    base_url: https://sandbox-reporting.rpdpymnt.com
+    base_url: https://reporting.rpdpymnt.com
     base_version: /api/v3
-    api_key: not-received
+    api_key: not received
     login:
       path: /merchant/user/login
     transactions_report:
       path: /transactions/report
     transaction_list:
-      path: /list
+      path: /transaction/list
     transaction:
       path: /transaction
     client:
