@@ -1,7 +1,7 @@
 package io.speedy.poc.core.ports.in.report;
 
 import io.speedy.poc.core.usecase.report.ReportUseCase;
-import io.speedy.poc.core.usecase.report.transferobject.ReportTO;
+import io.speedy.poc.core.ports.in.report.transferobject.ReportTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;

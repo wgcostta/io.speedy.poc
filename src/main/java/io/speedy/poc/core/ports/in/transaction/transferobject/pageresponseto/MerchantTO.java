@@ -1,6 +1,6 @@
-package io.speedy.poc.core.usecase.transaction.transferobject.pageresponseto;
+package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
-import io.speedy.poc.core.ports.out.transaction.transferobject.pageresponse.Merchant;
+import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.Merchant;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

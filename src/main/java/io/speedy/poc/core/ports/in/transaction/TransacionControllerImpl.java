@@ -1,6 +1,7 @@
 package io.speedy.poc.core.ports.in.transaction;
 
 import io.speedy.poc.core.usecase.transaction.TransactionUseCase;
+import io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto.PageResponseTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -15,12 +16,14 @@ public class TransacionControllerImpl implements TransacionController {
     @Autowired
     private TransactionUseCase transactionUseCase;
 
+    @Override
     @PostMapping
-    public ResponseEntity<?> report(@RequestParam(value = "transactionId") String fromDate,
-                                    @RequestHeader("Authorization") String authorization
+    public ResponseEntity<?> findByTransactionId(@RequestParam(value = "transactionId") String transactionId,
+                                                 @RequestHeader("Authorization") String authorization
     ) {
-        //ReportTO reportTO = reportUseCase.getReport(fromDate, toDate, merchant, acquirer, authorization);
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(
+                transactionUseCase.findByTransactionId(transactionId, authorization)
+        );
     }
 
     @Override
@@ -37,7 +40,9 @@ public class TransacionControllerImpl implements TransacionController {
                                   @RequestParam(value = "filterValue", required = false) String filterValue,
                                   @RequestParam(value = "page", required = false) Integer page,
                                   @RequestHeader("Authorization") String authorization) throws ExecutionException, InterruptedException {
-        transactionUseCase.getList(fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page, authorization);
-        return ResponseEntity.ok(null);
+        PageResponseTO pageResponseTO =
+                transactionUseCase.getList(
+                        fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page, authorization);
+        return ResponseEntity.ok(pageResponseTO);
     }
 }

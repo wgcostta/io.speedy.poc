@@ -1,7 +1,7 @@
 package io.speedy.poc.core.ports.in.login;
 
 import io.speedy.poc.core.usecase.login.LoginUseCase;
-import io.speedy.poc.core.usecase.login.transferobject.AccessTokenTO;
+import io.speedy.poc.core.ports.in.login.transferobject.AccessTokenTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

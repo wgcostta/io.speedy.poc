@@ -1,6 +1,6 @@
 package io.speedy.poc.core.usecase.report;
 
-import io.speedy.poc.core.usecase.report.transferobject.ReportTO;
+import io.speedy.poc.core.ports.in.report.transferobject.ReportTO;
 
 import java.util.Date;
 

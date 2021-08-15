@@ -1,4 +1,4 @@
-package io.speedy.poc.core.ports.out.client.transferobject;
+package io.speedy.poc.core.ports.in.client.transferobject;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerInfoResponse {
+public class CustomerInfoResponseTO {
     private int id;
     private String created_at;
     private String updated_at;

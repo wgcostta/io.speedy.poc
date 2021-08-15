@@ -1,15 +1,23 @@
 package io.speedy.poc.core.usecase.transaction;
 
-import io.speedy.poc.core.ports.out.report.transferobject.Report;
-import io.speedy.poc.core.ports.out.transaction.RestSenderPortTransaction;
-import io.speedy.poc.core.ports.out.transaction.transferobject.PageResponse;
+import com.google.gson.Gson;
+import io.speedy.poc.core.ports.out.sender.RestSenderClient;
+import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.PageResponse;
+import io.speedy.poc.core.usecase.transaction.transferobject.transaction.TransactionResponse;
 import io.speedy.poc.core.usecase.transaction.enums.*;
+import io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto.PageResponseTO;
+import io.speedy.poc.core.ports.in.transaction.transferobject.transactionresponseto.TransactionResponseTO;
 import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -19,10 +27,19 @@ import java.util.concurrent.ExecutionException;
 public class TransactionUseCaseImpl implements TransactionUseCase {
 
     @Autowired
-    RestSenderPortTransaction restSenderPortTransaction;
+    RestSenderClient restSenderClient;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
+    @Value("${api.speedy.transaction.path}")
+    private String path;
+
+    @Value("${api.speedy.transaction_list.path}")
+    private String pathList;
 
     @Override
-    public  getList(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page, String authorization) throws ExecutionException, InterruptedException {
+    public PageResponseTO getList(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page, String authorization) throws ExecutionException, InterruptedException {
         this.validateStatus(status);
         this.validateErrorCode(errorCode);
         this.validateOperation(operation);
@@ -31,11 +48,63 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
         this.validateParameters(fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page);
 
         CompletableFuture.runAsync(() -> log.info("Validation Finished"));
+        String response =
+                restSenderClient.post(this.getUriParameters(
+                        fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page
+                ), authorization, path + pathList);
+
+        Gson gson = new Gson();
         Optional<PageResponse> pageResponseOptional =
-                restSenderPortTransaction.getList(
-                        fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page,authorization);
-        if(pageResponseOptional.isPresent())
-            pageResponseOptional.get();
+                Optional.ofNullable(gson.fromJson(response, PageResponse.class));
+
+        if (pageResponseOptional.isPresent())
+            return PageResponseTO.from(pageResponseOptional.get());
+        return new PageResponseTO();
+    }
+
+    @Override
+    public TransactionResponseTO findByTransactionId(String transactionId, String authorization) {
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("transactionId", transactionId);
+        String response =
+                restSenderClient.post(
+                        parameters, authorization, path
+                );
+
+        Gson gson = new Gson();
+        Optional<TransactionResponse> transactionResponse =
+                Optional.ofNullable(gson.fromJson(response, TransactionResponse.class));
+
+        if (transactionResponse.isPresent())
+            return this.modelMapper.map(transactionResponse.get(), TransactionResponseTO.class);
+        return new TransactionResponseTO();
+    }
+
+    private Map<String, String> getUriParameters(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page) {
+        Map<String, String> parameters = new HashMap<>();
+        if (fromDate != null)
+            parameters.put("fromDate", new SimpleDateFormat("yyyy-MM-dd").format(fromDate));
+        if (toDate != null)
+            parameters.put("toDate", new SimpleDateFormat("yyyy-MM-dd").format(toDate));
+        if (status != null)
+            parameters.put("status", status);
+        if (operation != null)
+            parameters.put("operation", operation);
+        if (merchantId != null)
+            parameters.put("merchantId", merchantId.toString());
+        if (acquirerId != null)
+            parameters.put("acquirerId", acquirerId.toString());
+        if (paymentMethod != null)
+            parameters.put("paymentMethod", paymentMethod);
+        if (errorCode != null)
+            parameters.put("errorCode", errorCode);
+        if (filterField != null)
+            parameters.put("filterField", filterField);
+        if (filterValue != null)
+            parameters.put("filterValue", filterValue);
+        if (page != null)
+            parameters.put("page", page.toString());
+        return parameters;
     }
 
     private void validateParameters(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page) {

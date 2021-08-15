@@ -1,4 +1,4 @@
-package io.speedy.poc.core.usecase.transaction.transferobject.pageresponseto;
+package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

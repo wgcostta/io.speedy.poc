@@ -1,6 +1,6 @@
-package io.speedy.poc.core.usecase.report.transferobject;
+package io.speedy.poc.core.ports.in.report.transferobject;
 
-import io.speedy.poc.core.ports.out.report.transferobject.ReportItems;
+import io.speedy.poc.core.usecase.report.transferobject.ReportItems;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

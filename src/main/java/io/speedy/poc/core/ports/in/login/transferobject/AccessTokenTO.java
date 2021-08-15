@@ -1,4 +1,4 @@
-package io.speedy.poc.core.usecase.login.transferobject;
+package io.speedy.poc.core.ports.in.login.transferobject;
 
 import lombok.Data;
 
