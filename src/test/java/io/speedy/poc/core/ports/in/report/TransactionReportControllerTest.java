@@ -103,7 +103,7 @@ public class TransactionReportControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetReportFailedToLoadParams() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetReportToLoadParams() throws URISyntaxException {
         wireMockServer.stubFor(post(urlPathEqualTo("/api/v3/transactions/report")).willReturn(
                 aResponse().withStatus(SC_OK)
                         .withHeader(HttpHeaders.CONTENT_TYPE, "application/json")

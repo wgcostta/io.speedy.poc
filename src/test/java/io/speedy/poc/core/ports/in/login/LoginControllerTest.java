@@ -75,7 +75,7 @@ public class LoginControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetAccessTokenFailedToLoadParams() {
+    public void shouldReturnFailedWhenGetAccessTokenToLoadParams() {
         given().contentType("application/json")
                 .port(port)
                 .when()

@@ -162,7 +162,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListFilterFieldIncorret() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListFilterFieldIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
         builder.addParameter("fromDate", "2015-01-01");
@@ -182,7 +182,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListFailedToLoadParams() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListToLoadParams() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
 
@@ -199,7 +199,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListEnumStatusIncorret() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListEnumStatusIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
         builder.addParameter("fromDate", "2015-01-01");
@@ -219,7 +219,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListEnumOperationIncorret() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListEnumOperationIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
         builder.addParameter("fromDate", "2015-01-01");
@@ -239,7 +239,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListEnumPaymentMethodIncorret() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListEnumPaymentMethodIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
         builder.addParameter("fromDate", "2015-01-01");
@@ -259,7 +259,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionListEnumErrorCodeIncorret() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionListEnumErrorCodeIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
         builder.addParameter("fromDate", "2015-01-01");
