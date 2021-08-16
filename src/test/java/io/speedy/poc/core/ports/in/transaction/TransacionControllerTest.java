@@ -131,7 +131,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionNotFoundFindByTransactionId() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionNotFoundFindByTransactionId() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path);
         builder.addParameter("transactionId", "1-1444392550-1");
@@ -147,7 +147,7 @@ public class TransacionControllerTest {
     }
 
     @Test
-    public void shouldReturnOkWhenGetTransactionNotFoundFindByTransactionIdFailedToLoadParams() throws URISyntaxException {
+    public void shouldReturnFailedWhenGetTransactionNotFoundFindByTransactionIdFailedToLoadParams() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path);
 
