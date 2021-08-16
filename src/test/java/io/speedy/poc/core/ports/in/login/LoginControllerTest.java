@@ -34,7 +34,7 @@ public class LoginControllerTest {
     @Value("${api.mock.password}")
     private String password;
 
-    private String path = "/api/v1/merchant/user/login?";
+    private String path = "/api/v1/merchant/user/login";
 
     @Before
     public void setUp() {
@@ -43,7 +43,7 @@ public class LoginControllerTest {
 
     @Test
     public void shouldReturnOkWhenGetAccessToken() {
-        String newPath = path + String.format("email=%s&password=%s", email, password);
+        String newPath = path + String.format("?email=%s&password=%s", email, password);
 
         AccessToken result =
                 given().contentType("application/json")
@@ -62,7 +62,7 @@ public class LoginControllerTest {
 
     @Test
     public void shouldReturnUnauthorizedUserWhenGetAccessToken() {
-        String newPath = path + String.format("email=%s&password=%s", email + "X", password);
+        String newPath = path + String.format("?email=%s&password=%s", email + "X", password);
 
         given().contentType("application/json")
                 .port(port)
@@ -72,5 +72,16 @@ public class LoginControllerTest {
                 .assertThat()
                 .statusCode(HttpStatus.UNAUTHORIZED.value());
 
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetAccessTokenFailedToLoadParams() {
+        given().contentType("application/json")
+                .port(port)
+                .when()
+                .post(path)
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value());
     }
 }

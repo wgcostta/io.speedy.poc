@@ -111,7 +111,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
 
     private void validateParameters(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page) {
         if (fromDate == null && toDate == null && status == null && operation == null && merchantId == null && acquirerId == null && paymentMethod == null && errorCode == null && filterField == null && filterValue == null && page == null)
-            throw new ParametersIncorrectException("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer");
+            throw new ParametersIncorrectException("Enter at least one of the parameters: fromDate | toDate | status | operation | merchantId | acquirerId | paymentMethod | errorCode | filterField | filterValue | page");
     }
 
     private void validateStatus(String status) {

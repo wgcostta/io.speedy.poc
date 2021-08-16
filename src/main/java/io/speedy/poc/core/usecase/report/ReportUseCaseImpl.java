@@ -5,6 +5,7 @@ import io.speedy.poc.core.ports.in.report.transferobject.ReportTO;
 import io.speedy.poc.core.ports.out.sender.RestSenderClient;
 import io.speedy.poc.core.ports.out.sender.transferobject.ResponseTO;
 import io.speedy.poc.core.usecase.report.transferobject.Report;
+import io.speedy.poc.infra.exceptions.ParametersIncorrectException;
 import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -45,7 +46,7 @@ public class ReportUseCaseImpl implements ReportUseCase {
 
     private void validateParameters(Date fromDate, Date toDate, Integer merchant, Integer acquirer) {
         if (fromDate == null && toDate == null && merchant == null && acquirer == null)
-            throw new ResourceNotFoundException("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer");
+            throw new ParametersIncorrectException("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer");
     }
 
     private Map<String, String> getUriParameters(Date fromDate, Date toDate, Integer merchant, Integer acquirer) {

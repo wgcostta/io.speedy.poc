@@ -147,6 +147,21 @@ public class TransacionControllerTest {
     }
 
     @Test
+    public void shouldReturnOkWhenGetTransactionNotFoundFindByTransactionIdFailedToLoadParams() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path);
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value());
+    }
+
+    @Test
     public void shouldReturnOkWhenGetTransactionListFilterFieldIncorret() throws URISyntaxException {
         URIBuilder builder = new URIBuilder();
         builder.setPath(baseVersion + path + pathList);
@@ -163,6 +178,103 @@ public class TransacionControllerTest {
                 .assertThat()
                 .statusCode(HttpStatus.BAD_REQUEST.value())
                 .body("message", is("Filter Field is not valid"))
+        ;
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetTransactionListFailedToLoadParams() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path + pathList);
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Enter at least one of the parameters: fromDate | toDate | status | operation | merchantId | acquirerId | paymentMethod | errorCode | filterField | filterValue | page"))
+        ;
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetTransactionListEnumStatusIncorret() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path + pathList);
+        builder.addParameter("fromDate", "2015-01-01");
+        builder.addParameter("toDate", "2021-08-15");
+        builder.addParameter("status", "Value Incorrect");
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Status is not valid"))
+        ;
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetTransactionListEnumOperationIncorret() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path + pathList);
+        builder.addParameter("fromDate", "2015-01-01");
+        builder.addParameter("toDate", "2021-08-15");
+        builder.addParameter("operation", "Value Incorrect");
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Operation is not valid"))
+        ;
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetTransactionListEnumPaymentMethodIncorret() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path + pathList);
+        builder.addParameter("fromDate", "2015-01-01");
+        builder.addParameter("toDate", "2021-08-15");
+        builder.addParameter("paymentMethod", "Value Incorrect");
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Payment Method is not valid"))
+        ;
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetTransactionListEnumErrorCodeIncorret() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path + pathList);
+        builder.addParameter("fromDate", "2015-01-01");
+        builder.addParameter("toDate", "2021-08-15");
+        builder.addParameter("errorCode", "Value Incorrect");
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Error Code is not valid"))
         ;
     }
 

@@ -109,4 +109,21 @@ public class ClientControllerTest {
         ;
 
     }
+
+    @Test
+    public void shouldReturnNotFoundWhenGetTransactionIdFailedToLoadParams() throws URISyntaxException {
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path);
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+        ;
+
+    }
 }

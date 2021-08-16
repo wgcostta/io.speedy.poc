@@ -3,7 +3,6 @@ package io.speedy.poc.core.ports.in.report;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
-import com.google.common.io.Files;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.utils.URIBuilder;
 import org.junit.Before;
@@ -16,10 +15,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.charset.Charset;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
@@ -102,6 +98,32 @@ public class TransactionReportControllerTest {
                 .statusCode(HttpStatus.OK.value())
                 .body("response.size()", is(2))
                 .body("status", is("APPROVED"));
+
+        wireMockServer.stop();
+    }
+
+    @Test
+    public void shouldReturnOkWhenGetReportFailedToLoadParams() throws URISyntaxException {
+        wireMockServer.stubFor(post(urlPathEqualTo("/api/v3/transactions/report")).willReturn(
+                aResponse().withStatus(SC_OK)
+                        .withHeader(HttpHeaders.CONTENT_TYPE, "application/json")
+                        .withBodyFile("transaction/get-report-mock.json")));
+
+        wireMockServer.start();
+
+
+        URIBuilder builder = new URIBuilder();
+        builder.setPath(baseVersion + path);
+
+        given().contentType("application/json")
+                .port(port)
+                .header("Authorization", accessToken)
+                .when()
+                .post(builder.build().toString())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .body("message", is("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer"));
 
         wireMockServer.stop();
     }
