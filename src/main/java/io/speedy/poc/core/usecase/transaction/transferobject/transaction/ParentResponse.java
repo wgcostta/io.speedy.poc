@@ -1,4 +1,4 @@
-package io.speedy.poc.core.ports.in.transaction.transferobject.transactionresponseto;
+package io.speedy.poc.core.usecase.transaction.transferobject.transaction;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class FxResponseTO {
-    private MerchantResponseTO merchant;
+public class ParentResponse {
+    private TransactionSubClass transaction;
 }

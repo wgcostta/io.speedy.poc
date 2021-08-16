@@ -1,7 +1,9 @@
 package io.speedy.poc.core.ports.out.sender;
 
 import com.google.gson.Gson;
+import io.speedy.poc.core.ports.out.sender.transferobject.ResponseTO;
 import io.speedy.poc.infra.exceptions.ReportException;
+import io.speedy.poc.infra.exceptions.UnauthorizedUserException;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,9 +37,10 @@ public class RestSenderClientImpl implements RestSenderClient {
                 .build();
     }
 
-
     @Override
-    public String post(Map<String, String> parameters, String authorization, String path) {
+    public ResponseTO post(Map<String, String> parameters, String authorization, String path) {
+        String body = "";
+        Integer statusCode = 0;
         try {
             HttpUrl.Builder urlBuilder
                     = HttpUrl.parse(baseUrl + baseVersion + path).newBuilder();
@@ -48,8 +51,10 @@ public class RestSenderClientImpl implements RestSenderClient {
 
             Gson gson = new Gson();
             try (Response response = client.newCall(request).execute()) {
-                if (response.code() == HttpStatus.OK.value()) {
-                    return response.body().string();
+                body = response.body().string();
+                statusCode = response.code();
+                if (statusCode.equals(HttpStatus.OK.value())) {
+                    return new ResponseTO(response.code(), body);
                 }
                 throw new ReportException("Failed to request " + path);
             }
@@ -57,6 +62,10 @@ public class RestSenderClientImpl implements RestSenderClient {
             log.error("Failed to request " + path + " " + ex.getMessage());
             throw new ReportException("Failed to request " + path);
         } catch (Exception ex) {
+            if (path.contains("login") && statusCode.equals(500)) {
+                if (body.contains("\"status\":\"DECLINED\""))
+                    throw new UnauthorizedUserException("Merchant User credentials is not valid");
+            }
             log.error("Failed to request " + path + " " + ex.getMessage());
             throw new ReportException("Failed to request " + path);
         }

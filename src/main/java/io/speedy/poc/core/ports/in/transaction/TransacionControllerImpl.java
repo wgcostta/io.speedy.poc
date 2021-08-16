@@ -19,11 +19,9 @@ public class TransacionControllerImpl implements TransacionController {
     @Override
     @PostMapping
     public ResponseEntity<?> findByTransactionId(@RequestParam(value = "transactionId") String transactionId,
-                                                 @RequestHeader("Authorization") String authorization
-    ) {
+                                                 @RequestHeader("Authorization") String authorization ) {
         return ResponseEntity.ok(
-                transactionUseCase.findByTransactionId(transactionId, authorization)
-        );
+                transactionUseCase.findByTransactionId(transactionId, authorization));
     }
 
     @Override

@@ -1,14 +1,12 @@
 package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
 import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.Merchant;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @Builder
 public class MerchantTO {
     private int originalAmount;

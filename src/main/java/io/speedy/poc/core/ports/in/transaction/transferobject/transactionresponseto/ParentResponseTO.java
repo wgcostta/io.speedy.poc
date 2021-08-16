@@ -9,6 +9,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class FxResponseTO {
-    private MerchantResponseTO merchant;
+public class ParentResponseTO {
+    private TransactionSubClassTO transaction;
 }

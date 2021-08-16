@@ -1,4 +1,4 @@
-package io.speedy.poc.infra.exceptions.config;
+package io.speedy.poc.infra.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

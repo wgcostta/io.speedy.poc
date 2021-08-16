@@ -1,12 +1,14 @@
 package io.speedy.poc.core.usecase.transaction;
 
 import com.google.gson.Gson;
-import io.speedy.poc.core.ports.out.sender.RestSenderClient;
-import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.PageResponse;
-import io.speedy.poc.core.usecase.transaction.transferobject.transaction.TransactionResponse;
-import io.speedy.poc.core.usecase.transaction.enums.*;
 import io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto.PageResponseTO;
 import io.speedy.poc.core.ports.in.transaction.transferobject.transactionresponseto.TransactionResponseTO;
+import io.speedy.poc.core.ports.out.sender.RestSenderClient;
+import io.speedy.poc.core.ports.out.sender.transferobject.ResponseTO;
+import io.speedy.poc.core.usecase.transaction.enums.*;
+import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.PageResponse;
+import io.speedy.poc.core.usecase.transaction.transferobject.transaction.TransactionResponse;
+import io.speedy.poc.infra.exceptions.ParametersIncorrectException;
 import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -48,14 +50,14 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
         this.validateParameters(fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page);
 
         CompletableFuture.runAsync(() -> log.info("Validation Finished"));
-        String response =
+        ResponseTO response =
                 restSenderClient.post(this.getUriParameters(
                         fromDate, toDate, status, operation, merchantId, acquirerId, paymentMethod, errorCode, filterField, filterValue, page
                 ), authorization, path + pathList);
 
         Gson gson = new Gson();
         Optional<PageResponse> pageResponseOptional =
-                Optional.ofNullable(gson.fromJson(response, PageResponse.class));
+                Optional.ofNullable(gson.fromJson(response.getBody(), PageResponse.class));
 
         if (pageResponseOptional.isPresent())
             return PageResponseTO.from(pageResponseOptional.get());
@@ -66,18 +68,18 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
     public TransactionResponseTO findByTransactionId(String transactionId, String authorization) {
         Map<String, String> parameters = new HashMap<>();
         parameters.put("transactionId", transactionId);
-        String response =
+        ResponseTO response =
                 restSenderClient.post(
                         parameters, authorization, path
                 );
 
         Gson gson = new Gson();
         Optional<TransactionResponse> transactionResponse =
-                Optional.ofNullable(gson.fromJson(response, TransactionResponse.class));
+                Optional.ofNullable(gson.fromJson(response.getBody(), TransactionResponse.class));
 
-        if (transactionResponse.isPresent())
+        if (transactionResponse.isPresent() && transactionResponse.get().getCustomerInfo() != null)
             return this.modelMapper.map(transactionResponse.get(), TransactionResponseTO.class);
-        return new TransactionResponseTO();
+        throw new ResourceNotFoundException("Resource no found transaction-id: " + transactionId);
     }
 
     private Map<String, String> getUriParameters(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page) {
@@ -109,7 +111,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
 
     private void validateParameters(Date fromDate, Date toDate, String status, String operation, Integer merchantId, Integer acquirerId, String paymentMethod, String errorCode, String filterField, String filterValue, Integer page) {
         if (fromDate == null && toDate == null && status == null && operation == null && merchantId == null && acquirerId == null && paymentMethod == null && errorCode == null && filterField == null && filterValue == null && page == null)
-            throw new ResourceNotFoundException("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer");
+            throw new ParametersIncorrectException("Enter at least one of the parameters: fromDate | toDate | merchant | acquirer");
     }
 
     private void validateStatus(String status) {
@@ -118,7 +120,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
                 EnumStatus.valueOfLabel(status);
         } catch (Exception ex) {
             log.error("Error convert status" + ex.getMessage());
-            throw new ResourceNotFoundException("Status is not valid");
+            throw new ParametersIncorrectException("Status is not valid");
         }
     }
 
@@ -128,7 +130,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
                 EnumOperation.valueOfLabel(operation);
         } catch (Exception ex) {
             log.error("Error convert operation" + ex.getMessage());
-            throw new ResourceNotFoundException("Operation is not valid");
+            throw new ParametersIncorrectException("Operation is not valid");
         }
     }
 
@@ -138,7 +140,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
                 EnumPaymentMethod.valueOfLabel(paymentMethod);
         } catch (Exception ex) {
             log.error("Error convert Payment Method" + ex.getMessage());
-            throw new ResourceNotFoundException("Payment Method is not valid");
+            throw new ParametersIncorrectException("Payment Method is not valid");
         }
     }
 
@@ -148,7 +150,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
                 EnumErrorCode.valueOfLabel(errorCode);
         } catch (Exception ex) {
             log.error("Error convert error code" + ex.getMessage());
-            throw new ResourceNotFoundException("Error Code is not valid");
+            throw new ParametersIncorrectException("Error Code is not valid");
         }
     }
 
@@ -158,7 +160,7 @@ public class TransactionUseCaseImpl implements TransactionUseCase {
                 EnumFilterField.valueOfLabel(filterField);
         } catch (Exception ex) {
             log.error("Error convert filter field" + ex.getMessage());
-            throw new ResourceNotFoundException("Filter Field is not valid");
+            throw new ParametersIncorrectException("Filter Field is not valid");
         }
     }
 }

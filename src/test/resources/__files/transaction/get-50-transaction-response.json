@@ -1,0 +1,2683 @@
+{
+  "per_page": 50,
+  "current_page": 1,
+  "next_page_url": "https:\/\/sandbox-reporting.rpdpymnt.com\/api\/v3\/transaction\/list?page=2",
+  "prev_page_url": null,
+  "from": 1,
+  "to": 50,
+  "data": [
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 1000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2020-11-23 23:26:54",
+      "created_at": "2020-11-23 23:26:53",
+      "acquirer": {
+        "id": 41,
+        "name": "Bank Transfer [BTP]",
+        "code": "BTP",
+        "type": "BANKTRANSFER"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "Test-Denem-Mongo-1",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2020-11-23 23:26:53",
+          "message": "Decline",
+          "transactionId": "1030245-1606174013-1307"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "CEM",
+        "billingLastName": "VAROL",
+        "email": "cem@freelancer.run"
+      },
+      "merchant": {
+        "id": 1307,
+        "name": "G-Merchant",
+        "allowPartialRefund": false,
+        "allowPartialCapture": false
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:12:25",
+      "created_at": "2018-10-12 15:12:24",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:12:24",
+          "message": "Invalid Merchant",
+          "transactionId": "1011028-1539357144-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011028-1539357144-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539357144,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b9d89bdc5",
+          "paymentType": "PAYTOCARD",
+          "token": "1aa65e9ad2209d4757823503f7e631cdd92dfc41820d640db6f6e4bbc3d330dc",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:11:42",
+      "created_at": "2018-10-12 15:11:41",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:11:41",
+          "message": "Invalid Merchant",
+          "transactionId": "1011027-1539357101-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011027-1539357101-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539357101,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b9ad38e8d",
+          "paymentType": "PAYTOCARD",
+          "token": "08e1ba6920a66e282ef7c50bd68af8a4cea973222992e775916cfb1fcb5b7233",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:11:01",
+      "created_at": "2018-10-12 15:10:59",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:10:59",
+          "message": "Invalid Merchant",
+          "transactionId": "1011026-1539357059-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011026-1539357059-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539357059,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b9831a8b6",
+          "paymentType": "PAYTOCARD",
+          "token": "e408b47fb6107a1b4393b280526860a1265169d64f36e371ca1324af6efb564e",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:09:35",
+      "created_at": "2018-10-12 15:09:34",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:09:34",
+          "message": "Invalid Merchant",
+          "transactionId": "1011025-1539356974-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011025-1539356974-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539356974,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b92e60e1b",
+          "paymentType": "PAYTOCARD",
+          "token": "87ba3056d1c408186809ba51ded096681eb265dcaca9436f38e5b9399ad107b6",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:07:49",
+      "created_at": "2018-10-12 15:07:47",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:07:47",
+          "message": "Invalid Merchant",
+          "transactionId": "1011024-1539356867-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011024-1539356867-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539356867,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b8c3e0267",
+          "paymentType": "PAYTOCARD",
+          "token": "82809e7b6bb4b2ab205bded015a733eb5b6e91d8324dad56bf1d56d3adb020b7",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:05:39",
+      "created_at": "2018-10-12 15:05:38",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:05:38",
+          "message": "Invalid Merchant",
+          "transactionId": "1011023-1539356738-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011023-1539356738-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539356738,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b842c8a2a",
+          "paymentType": "PAYTOCARD",
+          "token": "fbafaa8eed5cc150862d3efcaba15ab5c7a02c242030eab4b1c06dbe6e85b5ed",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:05:30",
+      "created_at": "2018-10-12 15:05:29",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:05:29",
+          "message": "Invalid Merchant",
+          "transactionId": "1011022-1539356729-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011022-1539356729-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539356729,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b83933a57",
+          "paymentType": "PAYTOCARD",
+          "token": "d421d3907470ef0853a19d6c7e5d01545713b904602e1b3e6872399cbdedce5e",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 15:05:14",
+      "created_at": "2018-10-12 15:05:12",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 15:05:12",
+          "message": "Invalid Merchant",
+          "transactionId": "1011021-1539356712-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1011021-1539356712-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539356712,
+          "code": "182",
+          "message": "Invalid Merchant",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bc0b82805fe0",
+          "paymentType": "PAYTOCARD",
+          "token": "92a8a8f2021905b0eb2d9089253562c794ff3b34dc0c16c947773d3f8a8a0f7b",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 07:42:38",
+      "created_at": "2018-10-12 07:34:16",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 07:34:16",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010993-1539329656-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010993-1539329656-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539329656,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bc04e78902c6",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010993-1539329656-1293",
+          "token": "04b72dc70298004c7b08463183f77809529fc812e2661e89c0a97195b3b84192",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/11eda261.ngrok.io\/ipn",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 07:42:39",
+      "created_at": "2018-10-12 07:33:45",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 07:33:45",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010992-1539329625-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010992-1539329625-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539329625,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bc04e59a3f5b",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010992-1539329625-1293",
+          "token": "5c4070a1e92e2b81aa72145a27b207debb7f90ca31b4f3b9cc7f553e20cf21e3",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/11eda261.ngrok.io\/ipn",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 07:16:37",
+      "created_at": "2018-10-12 07:15:36",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 07:15:36",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010990-1539328536-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-12 07:04:36",
+      "created_at": "2018-10-12 07:02:21",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1500,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-12 07:02:21",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010989-1539327741-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010989-1539327741-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1500,
+          "currency": "RUB",
+          "date": 1539327741,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bc046fd4c50e",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010989-1539327741-1293",
+          "token": "f90fce81ab4faa5a8e1d940ceb1de3e8c004d4d3c9e870ffc056842cbfd5fd28",
+          "convertedAmount": 1500,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 15:26:38",
+      "created_at": "2018-10-11 15:25:47",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 15:25:47",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010981-1539271547-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010981-1539271547-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539271547,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bbf6b7b2957c",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010981-1539271547-1293",
+          "token": "62041fc70665c293c8b7f7d1173facbc97b7dd7637beba76e612bd5f70516ee0",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 15:24:35",
+      "created_at": "2018-10-11 15:09:42",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 15:09:42",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010978-1539270582-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010978-1539270582-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539270582,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bbf67b6bcee4",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010978-1539270582-1293",
+          "token": "f22d038a00ebba5b699682012b861d8e8510192e4e3b6d342d89143366d999c8",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 15:24:33",
+      "created_at": "2018-10-11 15:08:41",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 15:08:41",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1010977-1539270521-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010977-1539270521-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1600,
+          "currency": "RUB",
+          "date": 1539270521,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5bbf6779ae569",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1010977-1539270521-1293",
+          "token": "000e1a1294664523f1a6a60c0bf7d59c013fa91fe7103926d9c46d228a2c7322",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 11:12:47",
+      "created_at": "2018-10-11 11:12:46",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 11:12:46",
+          "message": "Waiting",
+          "transactionId": "1010948-1539256366-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 08:49:36",
+      "created_at": "2018-10-11 08:49:35",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 08:49:35",
+          "message": "Waiting",
+          "transactionId": "1010941-1539247775-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 08:04:53",
+      "created_at": "2018-10-11 08:04:52",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 08:04:52",
+          "message": "Waiting",
+          "transactionId": "1010940-1539245092-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 06:42:31",
+      "created_at": "2018-10-11 06:42:30",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1600,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 06:42:30",
+          "message": "Waiting",
+          "transactionId": "1010935-1539240150-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-11 06:42:20",
+      "created_at": "2018-10-11 06:42:18",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1600,
+          "originalCurrency": "TRY",
+          "convertedAmount": 1600,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-11 06:42:18",
+          "message": "Currency not allowed",
+          "transactionId": "1010934-1539240138-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010934-1539240138-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1600,
+          "currency": "TRY",
+          "date": 1539240138,
+          "code": "176",
+          "message": "Currency not allowed",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "DECLINED",
+          "customData": null,
+          "chainId": "5bbef0ca821bd",
+          "paymentType": "PAYTOCARD",
+          "token": "0dd6cc815f50b91006db0233f2f3a228454e2efb4f95b8e5aa8208d2aefe5542",
+          "convertedAmount": 1600,
+          "convertedCurrency": "TRY",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 13:01:12",
+      "created_at": "2018-10-10 13:01:12",
+      "fx": {
+        "merchant": {
+          "originalAmount": 16000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 16000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 13:01:12",
+          "message": "Waiting",
+          "transactionId": "1010904-1539176472-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 12:58:10",
+      "created_at": "2018-10-10 12:58:09",
+      "fx": {
+        "merchant": {
+          "originalAmount": 16000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 16000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 12:58:09",
+          "message": "Waiting",
+          "transactionId": "1010900-1539176289-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 12:34:04",
+      "created_at": "2018-10-10 12:34:03",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 12:34:03",
+          "message": "Waiting",
+          "transactionId": "1010889-1539174843-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 12:24:46",
+      "created_at": "2018-10-10 12:24:45",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 12:24:45",
+          "message": "Waiting",
+          "transactionId": "1010883-1539174285-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 08:05:09",
+      "created_at": "2018-10-10 08:05:07",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 08:05:07",
+          "message": "Invalid response from acquirer",
+          "transactionId": "1010802-1539158707-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010802-1539158707-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539158707,
+          "code": "151",
+          "message": "Invalid response from acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bbdb2b397270",
+          "paymentType": "PAYTOCARD",
+          "token": "aed4414722d1c3035bf6b9b46c50d900eb6645cd822ee211917bf11d3370984a",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 07:50:39",
+      "created_at": "2018-10-10 07:50:38",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 07:50:38",
+          "message": "Invalid response from acquirer",
+          "transactionId": "1010800-1539157838-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010800-1539157838-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539157838,
+          "code": "151",
+          "message": "Invalid response from acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bbdaf4e9d325",
+          "paymentType": "PAYTOCARD",
+          "token": "04417480c3e75c1eb235f7ed92e94e6f0310c2688a6815fd0f6a33ae3ac5c5ce",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "411111XXXXXX1111",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 07:48:39",
+      "created_at": "2018-10-10 07:48:38",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 07:48:38",
+          "message": "Invalid response from acquirer",
+          "transactionId": "1010799-1539157718-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010799-1539157718-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539157718,
+          "code": "151",
+          "message": "Invalid response from acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bbdaed64c436",
+          "paymentType": "PAYTOCARD",
+          "token": "d29dd3924ad512dc2b52b2ef3798f2ae9ffd0cc64cb9103d23c5090d3c2eb8dd",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "401288XXXXXX1881",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 07:47:03",
+      "created_at": "2018-10-10 07:47:02",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 07:47:02",
+          "message": "Invalid response from acquirer",
+          "transactionId": "1010798-1539157622-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010798-1539157622-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539157622,
+          "code": "151",
+          "message": "Invalid response from acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bbdae76e535c",
+          "paymentType": "PAYTOCARD",
+          "token": "82db3dad570685cfbde70f90b23ce79f9e50c868f440c5192e642024b48b1ec9",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "401288XXXXXX1881",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 07:46:51",
+      "created_at": "2018-10-10 07:46:50",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "RUB",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 07:46:50",
+          "message": "Invalid response from acquirer",
+          "transactionId": "1010797-1539157610-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010797-1539157610-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 1000,
+          "currency": "RUB",
+          "date": 1539157610,
+          "code": "151",
+          "message": "Invalid response from acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5bbdae6a16019",
+          "paymentType": "PAYTOCARD",
+          "token": "eb93d57a4a2447e08f6c78a8a853c756b576713c95c34cc02bb4720faeb0ff5a",
+          "convertedAmount": 1000,
+          "convertedCurrency": "RUB",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "401288XXXXXX1881",
+        "email": "seckin@bumin.io",
+        "billingFirstName": "SECKIN",
+        "billingLastName": "SEN"
+      },
+      "updated_at": "2018-10-10 07:46:26",
+      "created_at": "2018-10-10 07:46:24",
+      "fx": {
+        "merchant": {
+          "originalAmount": 16000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 16000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 115,
+        "name": "RoyalPay PayToCard",
+        "code": "RP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-10-10 07:46:24",
+          "message": "Currency not allowed",
+          "transactionId": "1010796-1539157584-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1010796-1539157584-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 16000,
+          "currency": "TRY",
+          "date": 1539157584,
+          "code": "176",
+          "message": "Currency not allowed",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "DECLINED",
+          "customData": null,
+          "chainId": "5bbdae50c0b63",
+          "paymentType": "PAYTOCARD",
+          "token": "e7e552efdd9b1bdbaeccc940a96a3d9ebb6fc87a4641d0c40e154672765dadea",
+          "convertedAmount": 16000,
+          "convertedCurrency": "TRY",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "test@bumin.io",
+        "billingFirstName": "Foo",
+        "billingLastName": "Bar"
+      },
+      "updated_at": "2018-09-20 14:25:08",
+      "created_at": "2018-09-20 14:24:14",
+      "fx": {
+        "merchant": {
+          "originalAmount": 111,
+          "originalCurrency": "TRY",
+          "convertedAmount": 111,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "APPROVED",
+          "operation": "DIRECT",
+          "created_at": "2018-09-20 14:24:14",
+          "message": "Approved",
+          "customData": null,
+          "type": "AUTH",
+          "transactionId": "1009739-1537453454-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1009739-1537453454-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 111,
+          "currency": "TRY",
+          "date": 1537453454,
+          "code": "00",
+          "message": "Approved",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "APPROVED",
+          "customData": null,
+          "chainId": "5ba3ad8e6e3e0",
+          "paymentType": "PAYTOCARD",
+          "authTransactionId": "1009739-1537453454-1293",
+          "token": "2ebe58bbf75e0232666128a7303af4254910fa1c245c5bdc05beb66ae59a4bb5",
+          "convertedAmount": 111,
+          "convertedCurrency": "TRY",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "test@bumin.io",
+        "billingFirstName": "Foo",
+        "billingLastName": "Bar"
+      },
+      "updated_at": "2018-09-20 14:22:00",
+      "created_at": "2018-09-20 14:21:57",
+      "fx": {
+        "merchant": {
+          "originalAmount": 121,
+          "originalCurrency": "TRY",
+          "convertedAmount": 121,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-20 14:21:57",
+          "message": "Waiting",
+          "transactionId": "1009738-1537453317-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "test@bumin.io",
+        "billingFirstName": "Foo",
+        "billingLastName": "Bar"
+      },
+      "updated_at": "2018-09-20 09:12:06",
+      "created_at": "2018-09-20 09:12:04",
+      "fx": {
+        "merchant": {
+          "originalAmount": 150,
+          "originalCurrency": "TRY",
+          "convertedAmount": 150,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-20 09:12:04",
+          "message": "Waiting",
+          "transactionId": "1009729-1537434724-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "test@bumin.io",
+        "billingFirstName": "Foo",
+        "billingLastName": "Bar"
+      },
+      "updated_at": "2018-09-20 09:09:06",
+      "created_at": "2018-09-20 09:09:04",
+      "fx": {
+        "merchant": {
+          "originalAmount": 150,
+          "originalCurrency": "TRY",
+          "convertedAmount": 150,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "ERROR",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-20 09:09:04",
+          "message": "Unable to connect to acquirer",
+          "transactionId": "1009728-1537434544-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      },
+      "ipn": {
+        "sent": true,
+        "merchant": {
+          "transactionId": "1009728-1537434544-1293",
+          "referenceNo": "trn-test-seck-1",
+          "amount": 150,
+          "currency": "TRY",
+          "date": 1537434544,
+          "code": 150,
+          "message": "Unable to connect to acquirer",
+          "operation": "DIRECT",
+          "type": "AUTH",
+          "status": "ERROR",
+          "customData": null,
+          "chainId": "5ba363b03bbe6",
+          "paymentType": "PAYTOCARD",
+          "token": "ab4929817707ef92f28cd0b9de8db53f2018e8bd0d4db6b760a4da26bd006b12",
+          "convertedAmount": 150,
+          "convertedCurrency": "TRY",
+          "IPNUrl": "https:\/\/requestb.in\/10bmd651",
+          "ipnType": "MERCHANTIPN"
+        }
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "test@bumin.io",
+        "billingFirstName": "Foo",
+        "billingLastName": "Bar"
+      },
+      "updated_at": "2018-09-19 14:47:19",
+      "created_at": "2018-09-19 14:47:17",
+      "fx": {
+        "merchant": {
+          "originalAmount": 150,
+          "originalCurrency": "TRY",
+          "convertedAmount": 150,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-19 14:47:17",
+          "message": "Waiting",
+          "transactionId": "1009721-1537368437-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "510139XXXXXX8174",
+        "email": "bedirhan@bumin.io",
+        "billingFirstName": "Bedirhan",
+        "billingLastName": "Atasoy"
+      },
+      "updated_at": "2018-09-19 13:43:19",
+      "created_at": "2018-09-19 13:43:16",
+      "fx": {
+        "merchant": {
+          "originalAmount": 150,
+          "originalCurrency": "TRY",
+          "convertedAmount": 150,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 113,
+        "name": "Speedy PayToCard",
+        "code": "SP",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "trn-test-seck-1",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-19 13:43:16",
+          "message": "Waiting",
+          "transactionId": "1009720-1537364596-1293"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 1293,
+        "name": "Seckin Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "401288XXXXXX1881",
+        "email": "a@gmail.com",
+        "billingFirstName": "John",
+        "billingLastName": "Doe"
+      },
+      "updated_at": "2018-09-19 12:15:35",
+      "created_at": "2018-09-19 12:15:35",
+      "fx": {
+        "merchant": {
+          "originalAmount": 1000,
+          "originalCurrency": "EUR",
+          "convertedAmount": 1000,
+          "convertedCurrency": "EUR"
+        }
+      },
+      "acquirer": {
+        "id": 23,
+        "name": "Mergen Bank",
+        "code": "MB",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "test-hsnxxx-p2c",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-09-19 12:15:35",
+          "message": "Waiting",
+          "transactionId": "1009715-1537359335-3"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 50000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 50000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-04-16 13:50:19",
+      "created_at": "2018-04-16 13:50:18",
+      "acquirer": {
+        "id": 42,
+        "name": "Bank Transfer Withdraw",
+        "code": "BTWD",
+        "type": "WITHDRAW"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "test-12-1",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-16 13:50:18",
+          "message": "Issuer Bank Error",
+          "transactionId": "1001637-1523886618-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "erhan",
+        "billingLastName": "bute",
+        "email": "erhan@gmail.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-04-09 07:39:57",
+      "created_at": "2018-04-09 07:39:57",
+      "acquirer": {
+        "id": 42,
+        "name": "Bank Transfer Withdraw",
+        "code": "BTWD",
+        "type": "WITHDRAW"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "8b7c1f45-8dca-4258-a056-6bd1bb68545a",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:39:57",
+          "message": "Issuer Bank Error",
+          "transactionId": "1001376-1523259597-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "name",
+        "billingLastName": "surname",
+        "email": "a@b.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-04-09 07:39:55",
+      "created_at": "2018-04-09 07:39:54",
+      "acquirer": {
+        "id": 41,
+        "name": "Bank Transfer [BTP]",
+        "code": "BTP",
+        "type": "BANKTRANSFER"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "2b7cbfec-cb91-45b2-9901-ccfefa7f1157",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:39:54",
+          "message": "Waiting",
+          "transactionId": "1001375-1523259594-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "ManualBankTransferTestName",
+        "billingLastName": "asdf",
+        "email": "a@b.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "JPY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "JPY"
+        }
+      },
+      "updated_at": "2018-04-09 07:39:54",
+      "created_at": "2018-04-09 07:39:53",
+      "acquirer": {
+        "id": 42,
+        "name": "Bank Transfer Withdraw",
+        "code": "BTWD",
+        "type": "WITHDRAW"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "7b2bec6d-3bf8-4e06-97f7-0ead76b663d3",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:39:53",
+          "message": "Waiting",
+          "transactionId": "1001374-1523259593-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "name",
+        "billingLastName": "lastname",
+        "email": "a@a.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "401288XXXXXX1881",
+        "email": "b@b.com",
+        "billingFirstName": "first name",
+        "billingLastName": "last name"
+      },
+      "updated_at": "2018-04-09 07:39:07",
+      "created_at": "2018-04-09 07:39:06",
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 23,
+        "name": "Mergen Bank",
+        "code": "MB",
+        "type": "PAYTOCARD"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "referenceNo",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "DIRECT",
+          "created_at": "2018-04-09 07:39:06",
+          "message": "Waiting",
+          "transactionId": "1001373-1523259546-3"
+        }
+      },
+      "refundable": false,
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-04-09 07:38:34",
+      "created_at": "2018-04-09 07:38:33",
+      "acquirer": {
+        "id": 42,
+        "name": "Bank Transfer Withdraw",
+        "code": "BTWD",
+        "type": "WITHDRAW"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "83f3c47f-3509-467d-9cc5-bd982f1edb4c",
+          "status": "DECLINED",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:38:33",
+          "message": "Issuer Bank Error",
+          "transactionId": "1001362-1523259513-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "name",
+        "billingLastName": "surname",
+        "email": "a@b.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-04-09 07:38:32",
+      "created_at": "2018-04-09 07:38:31",
+      "acquirer": {
+        "id": 41,
+        "name": "Bank Transfer [BTP]",
+        "code": "BTP",
+        "type": "BANKTRANSFER"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "ec66be00-c56d-47f6-bd6d-9ace6528573d",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:38:31",
+          "message": "Waiting",
+          "transactionId": "1001361-1523259511-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "ManualBankTransferTestName",
+        "billingLastName": "asdf",
+        "email": "a@b.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 10000,
+          "originalCurrency": "JPY",
+          "convertedAmount": 10000,
+          "convertedCurrency": "JPY"
+        }
+      },
+      "updated_at": "2018-04-09 07:38:30",
+      "created_at": "2018-04-09 07:38:27",
+      "acquirer": {
+        "id": 42,
+        "name": "Bank Transfer Withdraw",
+        "code": "BTWD",
+        "type": "WITHDRAW"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "9cc65826-a418-46e5-b0af-f2cb49505e84",
+          "status": "WAITING",
+          "customData": null,
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-04-09 07:38:27",
+          "message": "Waiting",
+          "transactionId": "1001360-1523259507-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "name",
+        "billingLastName": "lastname",
+        "email": "a@a.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "fx": {
+        "merchant": {
+          "originalAmount": 5000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 5000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "updated_at": "2018-03-08 14:44:36",
+      "created_at": "2018-03-08 14:44:36",
+      "acquirer": {
+        "id": 41,
+        "name": "Bank Transfer [BTP]",
+        "code": "BTP",
+        "type": "BANKTRANSFER"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "reference_5aa13b3cb2fe2",
+          "status": "WAITING",
+          "customData": "2206-1520515912-458",
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-03-08 14:44:36",
+          "message": "Waiting",
+          "transactionId": "999544-1520520276-3"
+        }
+      },
+      "refundable": false,
+      "customerInfo": {
+        "billingFirstName": "John",
+        "billingLastName": "Doe",
+        "email": "john@doe.com"
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "billingFirstName": "John",
+        "billingLastName": "Doe",
+        "email": "john@doe.com"
+      },
+      "updated_at": "2018-03-02 11:27:05",
+      "created_at": "2018-03-02 11:27:05",
+      "fx": {
+        "merchant": {
+          "originalAmount": 5000,
+          "originalCurrency": "TRY",
+          "convertedAmount": 5000,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 31,
+        "name": "Mergen Bank",
+        "code": "MB",
+        "type": "CITADEL"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "reference_5a95c40539970",
+          "status": "WAITING",
+          "customData": "48705-1519990024-951",
+          "type": "AUTH",
+          "operation": "3D",
+          "created_at": "2018-03-02 11:27:05",
+          "message": "Waiting",
+          "transactionId": "999319-1519990025-3"
+        }
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "0000000000000000",
+        "email": "john@doe.com",
+        "billingFirstName": "John",
+        "billingLastName": "Doe"
+      },
+      "updated_at": "2018-02-05 09:16:16",
+      "created_at": "2018-02-05 09:15:08",
+      "fx": {
+        "merchant": {
+          "originalAmount": 500,
+          "originalCurrency": "TRY",
+          "convertedAmount": 500,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 31,
+        "name": "Mergen Bank",
+        "code": "MB",
+        "type": "CITADEL"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "reference_5a7532f72f342",
+          "status": "APPROVED",
+          "operation": "3DAUTH",
+          "type": "AUTH",
+          "message": "Approved",
+          "customData": "3981-1517822105-1",
+          "created_at": "2018-02-05 09:16:16",
+          "transactionId": "997877-1517822176-3"
+        }
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    },
+    {
+      "customerInfo": {
+        "number": "0000000000000000",
+        "email": "john@doe.com",
+        "billingFirstName": "John",
+        "billingLastName": "Doe"
+      },
+      "updated_at": "2018-02-05 09:15:00",
+      "created_at": "2018-02-05 09:14:07",
+      "fx": {
+        "merchant": {
+          "originalAmount": 350,
+          "originalCurrency": "TRY",
+          "convertedAmount": 350,
+          "convertedCurrency": "TRY"
+        }
+      },
+      "acquirer": {
+        "id": 31,
+        "name": "Mergen Bank",
+        "code": "MB",
+        "type": "CITADEL"
+      },
+      "transaction": {
+        "merchant": {
+          "referenceNo": "reference_5a7532c2d8475",
+          "status": "APPROVED",
+          "operation": "3DAUTH",
+          "type": "AUTH",
+          "message": "Approved",
+          "customData": "48128-1517822044-951",
+          "created_at": "2018-02-05 09:15:00",
+          "transactionId": "997875-1517822100-3"
+        }
+      },
+      "merchant": {
+        "id": 3,
+        "name": "Dev-Merchant",
+        "allowPartialRefund": true,
+        "allowPartialCapture": true
+      }
+    }
+  ]
+}

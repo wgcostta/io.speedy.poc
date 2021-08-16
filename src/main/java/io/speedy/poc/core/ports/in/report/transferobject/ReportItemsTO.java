@@ -4,11 +4,13 @@ import io.speedy.poc.core.usecase.report.transferobject.ReportItems;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor

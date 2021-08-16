@@ -9,4 +9,6 @@ import lombok.NoArgsConstructor;
 @Getter
 public class Ipn {
     private boolean received;
+    private boolean sent;
+    private MerchantIpn merchant;
 }

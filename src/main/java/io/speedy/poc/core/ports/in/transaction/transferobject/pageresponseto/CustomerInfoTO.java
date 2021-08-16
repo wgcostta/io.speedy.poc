@@ -1,14 +1,12 @@
 package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Builder
+@Setter
 public class CustomerInfoTO {
     private String number;
     private String email;

@@ -3,6 +3,7 @@ package io.speedy.poc.core.usecase.report;
 import com.google.gson.Gson;
 import io.speedy.poc.core.ports.in.report.transferobject.ReportTO;
 import io.speedy.poc.core.ports.out.sender.RestSenderClient;
+import io.speedy.poc.core.ports.out.sender.transferobject.ResponseTO;
 import io.speedy.poc.core.usecase.report.transferobject.Report;
 import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +29,14 @@ public class ReportUseCaseImpl implements ReportUseCase {
     public ReportTO getReport(Date fromDate, Date toDate, Integer merchant, Integer acquirer, String authorization) {
         this.validateParameters(fromDate, toDate, merchant, acquirer);
 
-        String response =
+        ResponseTO response =
                 restSenderClient.post(
                         this.getUriParameters(fromDate, toDate, merchant, acquirer), authorization, path
                 );
 
         Gson gson = new Gson();
         Optional<Report> reportOptional =
-                Optional.ofNullable(gson.fromJson(response, Report.class));
+                Optional.ofNullable(gson.fromJson(response.getBody(), Report.class));
 
         if (reportOptional.isPresent())
             return ReportTO.from(reportOptional.get());

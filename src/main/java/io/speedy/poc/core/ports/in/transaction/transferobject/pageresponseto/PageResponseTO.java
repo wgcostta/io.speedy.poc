@@ -1,16 +1,14 @@
 package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
 import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.PageResponse;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @Builder
 public class PageResponseTO {
     private int per_page;
@@ -22,8 +20,7 @@ public class PageResponseTO {
     private List<DatumTO> data;
 
     public static PageResponseTO from(PageResponse pageResponse) {
-        return
-                PageResponseTO.builder()
+        return  PageResponseTO.builder()
                         .per_page(pageResponse.getPer_page())
                         .current_page(pageResponse.getCurrent_page())
                         .next_page_url(pageResponse.getNext_page_url())

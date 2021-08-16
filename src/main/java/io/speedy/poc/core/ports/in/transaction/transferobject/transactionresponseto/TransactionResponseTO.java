@@ -3,15 +3,19 @@ package io.speedy.poc.core.ports.in.transaction.transferobject.transactionrespon
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 public class TransactionResponseTO {
-    public FxResponseTO fx;
-    public CustomerInfoResponseTO customerInfo;
-    public MerchantResponseTO merchant;
-    public TransactionSubClassTO transaction;
+    private FxResponseTO fx;
+    private CustomerInfoResponseTO customerInfo;
+    private MerchantResponseTO merchant;
+    private TransactionSubClassTO transaction;
+    private ParentResponseTO parent;
+
 }
 
 

@@ -18,6 +18,16 @@ public class InterceptorExceptionHandler extends ResponseEntityExceptionHandler 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiExceptionResponse> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request) {
         ApiExceptionResponse err = ApiExceptionResponse.builder()
+                .status(HttpStatus.NOT_FOUND.value())
+                .message(e.getMessage())
+                .timeStamp(System.currentTimeMillis())
+                .build();
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+    }
+
+    @ExceptionHandler(ParametersIncorrectException.class)
+    public ResponseEntity<ApiExceptionResponse> resourceNotFound(ParametersIncorrectException e, HttpServletRequest request) {
+        ApiExceptionResponse err = ApiExceptionResponse.builder()
                 .status(HttpStatus.BAD_REQUEST.value())
                 .message(e.getMessage())
                 .timeStamp(System.currentTimeMillis())
@@ -28,11 +38,11 @@ public class InterceptorExceptionHandler extends ResponseEntityExceptionHandler 
     @ExceptionHandler(UnauthorizedUserException.class)
     public ResponseEntity<ApiExceptionResponse> resourceNotFound(UnauthorizedUserException e, HttpServletRequest request) {
         ApiExceptionResponse err = ApiExceptionResponse.builder()
-                .status(HttpStatus.BAD_REQUEST.value())
+                .status(HttpStatus.UNAUTHORIZED.value())
                 .message(e.getMessage())
                 .timeStamp(System.currentTimeMillis())
                 .build();
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(err);
     }
 
     @ExceptionHandler(ReportException.class)

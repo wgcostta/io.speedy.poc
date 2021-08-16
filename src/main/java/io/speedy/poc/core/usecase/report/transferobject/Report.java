@@ -11,5 +11,5 @@ import java.util.List;
 @NoArgsConstructor
 public class Report {
     private String status;
-    private List<ReportItems> reponse;
+    private List<ReportItems> response;
 }

@@ -13,7 +13,7 @@ logging:
 
 api:
   speedy:
-    base_url: https://sandbox-reporting.rpdpymnt.com
+    base_url: http://localhost:8089
     base_version: /api/v3
     api_key: not-received
     login:

@@ -1,10 +1,8 @@
 package io.speedy.poc.core.ports.in.transaction.transferobject.pageresponseto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.speedy.poc.core.usecase.transaction.transferobject.pageresponse.Datum;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,10 +11,12 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @Getter
 @Builder
+@Setter
 public class DatumTO {
     private FxTO fx;
     private CustomerInfoTO customerInfo;
     private MerchantTO merchant;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private IpnTO ipn;
     private TransactionTO transaction;
     private AcquirerTO acquirer;
@@ -41,7 +41,7 @@ public class DatumTO {
                 .merchant(
                         MerchantTO.from(itemData.getMerchant())
                 )
-                .ipn(new IpnTO(itemData.getIpn().isReceived()))
+                .ipn((itemData.getIpn() != null) ? IpnTO.from(itemData.getIpn()) : null)
                 .transaction(new TransactionTO(MerchantTO.from(itemData.getTransaction().getMerchant())))
                 .acquirer(
                         AcquirerTO.builder()
