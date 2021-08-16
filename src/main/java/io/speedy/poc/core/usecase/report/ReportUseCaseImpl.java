@@ -6,7 +6,6 @@ import io.speedy.poc.core.ports.out.sender.RestSenderClient;
 import io.speedy.poc.core.ports.out.sender.transferobject.ResponseTO;
 import io.speedy.poc.core.usecase.report.transferobject.Report;
 import io.speedy.poc.infra.exceptions.ParametersIncorrectException;
-import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
