@@ -23,7 +23,7 @@ public class InterceptorErrorHandler {
     }
 
     private ApiErrorResponse getErrorResponse(MethodArgumentNotValidException ex, HttpStatus status, List<ApiErrorObject> errors) {
-        return new ApiErrorResponse("Requisição possui campos inválidos", status.value(),
+        return new ApiErrorResponse("Request has invalid fields", status.value(),
                 status.getReasonPhrase(), ex.getBindingResult().getObjectName(), errors);
     }
 
@@ -42,7 +42,7 @@ public class InterceptorErrorHandler {
     }
 
     private ApiErrorResponse getErrorResponse(MissingServletRequestParameterException ex, HttpStatus status, String errors) {
-        return new ApiErrorResponse("Requisição possui campos inválidos", status.value(),
+        return new ApiErrorResponse("Request has invalid fields", status.value(),
                 status.getReasonPhrase(), ex.getParameterName(), null);
     }
 
