@@ -1,6 +1,10 @@
-package io.speedy.poc.infra.exceptions;
+package io.speedy.poc.infra.exceptions.interceptor;
 
 
+import io.speedy.poc.infra.exceptions.ParametersIncorrectException;
+import io.speedy.poc.infra.exceptions.ReportException;
+import io.speedy.poc.infra.exceptions.ResourceNotFoundException;
+import io.speedy.poc.infra.exceptions.UnauthorizedUserException;
 import io.speedy.poc.infra.exceptions.models.ApiExceptionResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package io.speedy.poc.infra.exceptions;
+package io.speedy.poc.infra.exceptions.interceptor;
 
 
 import io.speedy.poc.infra.exceptions.models.ApiErrorObject;
@@ -35,8 +35,6 @@ public class InterceptorErrorHandler {
 
     @ExceptionHandler(MissingServletRequestParameterException.class)
     public ResponseEntity<Object> handleMethodArgumentNotValid(MissingServletRequestParameterException ex) {
-
-
         ApiErrorResponse errorResponse = getErrorResponse(ex, HttpStatus.BAD_REQUEST, ex.getParameterName());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
